@@ -3,9 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { TableroComponent } from './paginas/tablero/tablero.component';
 import { LoginComponent } from './login/login.component';
 import { Page404Component } from './page404/page404.component';
+import { PaginasComponent } from './paginas/paginas.component';
 
 const routes: Routes = [
-  { path: 'tablero', component: TableroComponent },
+  {
+    path: '',
+    component: PaginasComponent,
+    children: [
+      { path: 'tablero', component: TableroComponent },
+      { path: '', redirectTo: '/tablero', pathMatch: 'full' },
+    ]
+  },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/tablero', pathMatch: 'full' },
   { path: '**', component: Page404Component }

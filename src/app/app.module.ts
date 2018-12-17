@@ -9,6 +9,7 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { LoginComponent } from './login/login.component';
 import { Page404Component } from './page404/page404.component';
 import { TableroComponent } from './paginas/tablero/tablero.component';
+import { PaginasComponent } from './paginas/paginas.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TableroComponent } from './paginas/tablero/tablero.component';
     BreadcrumbComponent,
     LoginComponent,
     Page404Component,
-    TableroComponent
+    TableroComponent,
+    PaginasComponent
   ],
   imports: [
     BrowserModule,
