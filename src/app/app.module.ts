@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
+import { LoginComponent } from './login/login.component';
+import { Page404Component } from './page404/page404.component';
+import { TableroComponent } from './paginas/tablero/tablero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    LoginComponent,
+    Page404Component,
+    TableroComponent
   ],
   imports: [
     BrowserModule,

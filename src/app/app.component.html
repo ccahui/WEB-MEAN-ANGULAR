@@ -1,7 +1,15 @@
 <app-header></app-header>
 <app-sidebar></app-sidebar>
+<!--Contenido Central de nuestra pagina-->
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <app-breadcrumb></app-breadcrumb>
-   </div>
-<router-outlet></router-outlet>
+  <!--Rutas de Pan-->
+  <app-breadcrumb></app-breadcrumb>
+
+  <section class="content">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+
+  </section>
+
+</div>
