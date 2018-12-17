@@ -7,6 +7,7 @@ import { PaginasComponent } from './paginas/paginas.component';
 import { RegistrarseComponent } from './login/registrarse.component';
 
 const routes: Routes = [
+  
   {
     path: '',
     component: PaginasComponent,
@@ -14,11 +15,11 @@ const routes: Routes = [
       { path: 'tablero', component: TableroComponent },
       { path: '', redirectTo: '/tablero', pathMatch: 'full' },
     ]
-  },
+  }/*
   { path: 'login', component: LoginComponent },
   { path: 'registrarse', component: RegistrarseComponent },
   { path: '', redirectTo: '/tablero', pathMatch: 'full' },
-  { path: '**', component: Page404Component }
+  { path: '**', component: Page404Component }*/
 ];
 
 @NgModule({
