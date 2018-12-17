@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { Page404Component } from './page404/page404.component';
 import { TableroComponent } from './paginas/tablero/tablero.component';
 import { PaginasComponent } from './paginas/paginas.component';
+import { RegistrarseComponent } from './login/registrarse.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PaginasComponent } from './paginas/paginas.component';
     LoginComponent,
     Page404Component,
     TableroComponent,
-    PaginasComponent
+    PaginasComponent,
+    RegistrarseComponent
   ],
   imports: [
     BrowserModule,

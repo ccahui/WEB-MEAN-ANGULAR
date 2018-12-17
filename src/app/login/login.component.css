@@ -1,85 +1,50 @@
-
-.limiter {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container-login100 {
-  width: 100%;  
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background: #ebeeef;
-}
-
-input{
-  width: 50%;
-}
-.wrap-login100 {
-  width: 670px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.login100-form-title {
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-
-  background-repeat: no-repeat;
+/*
+Template Name: Admin pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*
+Template Name: Admin Pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*Theme Colors*/
+/*bootstrap Color*/
+/*Light colors*/
+/*Normal Color*/
+/*Extra Variable*/
+/*******************
+Login register and recover password Page
+******************/
+.login-register {
   background-size: cover;
-  background-position: center;
-
-  padding: 70px 15px 74px 15px;
-}
-
-.login100-form-title-1 {
-  font-family: Poppins-Bold;
-  font-size: 30px;
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: center;
-}
-
-.login100-form-title::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(54,84,99,0.7);
-}
-@media (max-width: 576px) {
-  .login100-form {
-    padding: 43px 15px 57px 117px;
-  }
-}
+  width: 100%;
+  padding: 10% 0;
+  position: fixed; }
 
-@media (max-width: 480px) {
-  .login100-form {
-    padding: 43px 15px 57px 15px;
-  }
-}
+.login-box {
+  width: 400px;
+  margin: 0 auto; }
+  .login-box .footer {
+    width: 100%;
+    left: 0px;
+    right: 0px; }
+  .login-box .social {
+    display: block;
+    margin-bottom: 30px; }
 
+#recoverform {
+  display: none; }
 
+.login-sidebar {
+  padding: 0px;
+  margin-top: 0px; }
+  .login-sidebar .login-box {
+    right: 0px;
+    position: absolute;
+    height: 100%; }
