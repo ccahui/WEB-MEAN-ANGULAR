@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { Page404Component } from './page404/page404.component';
 import { PaginasComponent } from './paginas/paginas.component';
 import { RegistrarseComponent } from './login/registrarse.component';
+import { Tablero1Component } from './paginas/tablero1/tablero1.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
     component: PaginasComponent,
     children: [
       { path: 'tablero', component: TableroComponent },
+      { path: 'tablero1', component: Tablero1Component },
       { path: '', redirectTo: '/tablero', pathMatch: 'full' },
     ]
   },
@@ -22,7 +24,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

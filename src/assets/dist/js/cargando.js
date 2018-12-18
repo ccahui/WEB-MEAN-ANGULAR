@@ -4,7 +4,6 @@
 
     var fadeTarget = document.getElementById("cargando");
     
-     this.setTimeout(function(){
         var fadeEffect =  setInterval(function () {
             if (!fadeTarget.style.opacity) {
               fadeTarget.style.opacity = 1;
@@ -16,11 +15,9 @@
             }
           }, 30);
           
-    },1000);
-    // El elemnto <div> contenedoe tiene que ser eliminado del DOM
     this.setTimeout(function(){
         fadeTarget.remove();
-    },1200)
+    },100);
     
     
     
