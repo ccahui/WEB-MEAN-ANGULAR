@@ -6,7 +6,7 @@ import { Tablero1Component } from './tablero1/tablero1.component';
 import { SharedModule } from '../shared/shared.module';
 import { PaginasComponent } from './paginas.component';
 import { PAGINAS_ROUTER } from './paginas.router';
-
+import { FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     TableroComponent,
@@ -16,7 +16,8 @@ import { PAGINAS_ROUTER } from './paginas.router';
   imports: [
     CommonModule,
     SharedModule, // Importando un Modulo que contien SideBar, BreadCrum, Navbar
-    PAGINAS_ROUTER
+    PAGINAS_ROUTER,
+    FormsModule
   ],
   exports: [
   Tablero1Component,  // No lo exporto porque estas componenetes no van a ser utilizadas

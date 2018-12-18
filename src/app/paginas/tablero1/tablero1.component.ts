@@ -13,12 +13,13 @@ export class Tablero1Component implements OnInit {
   ngOnInit() {
   }
   cambiarPorcentaje(porcentaje: number) {
-    if (porcentaje > 100) {
+    if (this.porcentaje >= 100 && porcentaje > 0) {
       this.porcentaje = 100;
       return;
     }
-    if (porcentaje < 0) {
+    if (this.porcentaje <= 0 && porcentaje < 0) {
       this.porcentaje = 0;
+      return;
     }
     this.porcentaje = this.porcentaje + porcentaje;
   }

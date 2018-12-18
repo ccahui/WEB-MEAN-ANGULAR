@@ -16,5 +16,4 @@ const routes: Routes = [
   { path: '', redirectTo: '/tablero', pathMatch: 'full' },
   { path: '**', component: Page404Component }
 ];
-
 export const APP_ROUTER = RouterModule.forRoot(routes);
