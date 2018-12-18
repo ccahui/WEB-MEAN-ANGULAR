@@ -15,8 +15,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     CommonModule
   ],
   exports: [
-    BreadcrumbComponent,
-    HeaderComponent,
+    BreadcrumbComponent, // Exporto estos componenetes porque va a ser utilizados
+    HeaderComponent,  // En este caso en Modulo Paginas, donde utilizo, header, Breadcrumb,Sidebar
     SidebarComponent
   ]
 })
