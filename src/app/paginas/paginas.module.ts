@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PaginasComponent } from './paginas.component';
 import { PAGINAS_ROUTER } from './paginas.router';
 import { FormsModule} from '@angular/forms';
+import { IncrementadorComponent } from '../componentes/incrementador/incrementador.component';
 @NgModule({
   declarations: [
     TableroComponent,
@@ -17,7 +18,8 @@ import { FormsModule} from '@angular/forms';
     CommonModule,
     SharedModule, // Importando un Modulo que contien SideBar, BreadCrum, Navbar
     PAGINAS_ROUTER,
-    FormsModule
+    FormsModule,
+    IncrementadorComponent
   ],
   exports: [
   Tablero1Component,  // No lo exporto porque estas componenetes no van a ser utilizadas
