@@ -7,21 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tablero1Component implements OnInit {
   // tslint:disable-next-line:no-inferrable-types
-  porcentaje: number = 50;
-  constructor() { }
+  porcentaje: number;
+  constructor() {
+    this.porcentaje = 50;
+  }
 
   ngOnInit() {
-  }
-  cambiarPorcentaje(porcentaje: number) {
-    if (this.porcentaje >= 100 && porcentaje > 0) {
-      this.porcentaje = 100;
-      return;
-    }
-    if (this.porcentaje <= 0 && porcentaje < 0) {
-      this.porcentaje = 0;
-      return;
-    }
-    this.porcentaje = this.porcentaje + porcentaje;
   }
 
 }

@@ -7,24 +7,25 @@ import { SharedModule } from '../shared/shared.module';
 import { PaginasComponent } from './paginas.component';
 import { PAGINAS_ROUTER } from './paginas.router';
 import { FormsModule} from '@angular/forms';
-import { IncrementadorComponent } from '../componentes/incrementador/incrementador.component';
+ import { IncrementadorComponent } from '../componentes/incrementador/incrementador.component';
 @NgModule({
   declarations: [
     TableroComponent,
     Tablero1Component,
     PaginasComponent,
+    IncrementadorComponent  // NO SE IMPORTA se DECLARA para poder usarlo dentro de este modulo
   ],
   imports: [
     CommonModule,
     SharedModule, // Importando un Modulo que contien SideBar, BreadCrum, Navbar
     PAGINAS_ROUTER,
-    FormsModule,
-    IncrementadorComponent
+    FormsModule
   ],
   exports: [
   Tablero1Component,  // No lo exporto porque estas componenetes no van a ser utilizadas
   Tablero1Component,  // Las componentes no son llamada directamente en otros Modulos
-  PaginasComponent
+  PaginasComponent,
+  // IncrementadorComponent
   ]
 })
 export class PaginasModule { }
