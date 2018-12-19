@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grafico-dona',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class GraficoDonaComponent implements OnInit {
+
+  @Input() doughnutChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  @Input() doughnutChartData: number[] = [350, 450, 100];
+  @Input() doughnutChartType = 'doughnut';
 
   constructor() { }
 

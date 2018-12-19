@@ -9,6 +9,8 @@ import { PAGINAS_ROUTER } from './paginas.router';
 import { FormsModule} from '@angular/forms';
  import { IncrementadorComponent } from '../componentes/incrementador/incrementador.component';
 import { GraficoDonaComponent } from '../componentes/grafico-dona/grafico-dona.component';
+// Grafica
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     TableroComponent,
@@ -21,7 +23,8 @@ import { GraficoDonaComponent } from '../componentes/grafico-dona/grafico-dona.c
     CommonModule,
     SharedModule, // Importando un Modulo que contien SideBar, BreadCrum, Navbar
     PAGINAS_ROUTER,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   exports: [
   Tablero1Component,  // No lo exporto porque estas componenetes no van a ser utilizadas
