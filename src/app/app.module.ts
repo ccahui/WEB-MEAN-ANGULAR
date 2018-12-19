@@ -13,7 +13,7 @@ import { PaginasModule } from './paginas/paginas.module';
     AppComponent,
     LoginComponent,
     Page404Component,
-    RegistrarseComponent,
+    RegistrarseComponent
   ],
   imports: [
     BrowserModule,

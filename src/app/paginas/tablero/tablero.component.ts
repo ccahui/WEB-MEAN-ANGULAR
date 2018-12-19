@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tablero',
   templateUrl: './tablero.component.html',
-  styles: []
+  styleUrls: ['./tablero.component.css']
 })
 export class TableroComponent implements OnInit {
 

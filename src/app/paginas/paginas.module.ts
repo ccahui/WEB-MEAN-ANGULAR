@@ -8,12 +8,14 @@ import { PaginasComponent } from './paginas.component';
 import { PAGINAS_ROUTER } from './paginas.router';
 import { FormsModule} from '@angular/forms';
  import { IncrementadorComponent } from '../componentes/incrementador/incrementador.component';
+import { GraficoDonaComponent } from '../componentes/grafico-dona/grafico-dona.component';
 @NgModule({
   declarations: [
     TableroComponent,
     Tablero1Component,
     PaginasComponent,
-    IncrementadorComponent  // NO SE IMPORTA se DECLARA para poder usarlo dentro de este modulo
+    IncrementadorComponent,  // NO SE IMPORTA se DECLARA para poder usarlo dentro de este modulo
+    GraficoDonaComponent
   ],
   imports: [
     CommonModule,
