@@ -11,13 +11,14 @@ import { FormsModule} from '@angular/forms';
 import { GraficoDonaComponent } from '../componentes/grafico-dona/grafico-dona.component';
 // Grafica
 import { ChartsModule } from 'ng2-charts';
+import { ConfiguracionesComponent } from './configuraciones/configuraciones.component';
 @NgModule({
   declarations: [
     TableroComponent,
     Tablero1Component,
     PaginasComponent,
     IncrementadorComponent,  // NO SE IMPORTA se DECLARA para poder usarlo dentro de este modulo
-    GraficoDonaComponent
+    GraficoDonaComponent, ConfiguracionesComponent
   ],
   imports: [
     CommonModule,

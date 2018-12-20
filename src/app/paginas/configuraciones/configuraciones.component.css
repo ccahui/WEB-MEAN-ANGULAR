@@ -1,0 +1,15 @@
+/* Cotiene un elemento statico y responsivo, para la navegacion, de la configuracion*/
+.no-print {
+  padding: 10px;
+  top: 100px;
+  background: rgb(255, 255, 255);
+  border: 0px solid rgb(221, 221, 221);
+  width: 250px;
+  height: 350px;
+  z-index: 99999;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+}
+.estiloFloat{
+    float:left; width: 50%; padding: 5px;
+}
+

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { TableroComponent } from './tablero/tablero.component';
 import { PaginasComponent } from './paginas.component';
 import { Tablero1Component } from './tablero1/tablero1.component';
+import { ConfiguracionesComponent } from './configuraciones/configuraciones.component';
 
 const routesPagina: Routes = [
   {
@@ -11,7 +12,9 @@ const routesPagina: Routes = [
     children: [
       { path: 'tablero', component: TableroComponent },
       { path: 'tablero1', component: Tablero1Component },
+      { path: 'configuraciones', component: ConfiguracionesComponent },
       { path: '', redirectTo: '/tablero', pathMatch: 'full' },
+
     ]
   },
 ];
