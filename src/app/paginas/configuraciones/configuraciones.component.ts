@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-configuraciones',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfiguracionesComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document) { }
 
   ngOnInit() {
   }
+  actualizarTema(newTema: string) {
+    // id : Tema es un elemto de index.html el contenedor Principal
+    const classTema = `skin-${newTema}`;
+    this.document.getElementById('tema').setAttribute('class', classTema);
 
+
+  }
 }

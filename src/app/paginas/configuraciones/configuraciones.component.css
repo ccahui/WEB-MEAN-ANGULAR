@@ -12,4 +12,9 @@
 .estiloFloat{
     float:left; width: 50%; padding: 5px;
 }
-
+.cuadro-header{
+  display:block; width: 20%; float: left; height: 10px;
+}
+.cuadro-navbar{
+  display:block; width: 20%; float: left; height: 40px;
+}
