@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { APP_ROUTER } from './app-routing.module';
 import { AppComponent } from './app.component';
+// Importando Formulario
 
 import { LoginComponent } from './login/login.component';
 import { Page404Component } from './page404/page404.component';
@@ -11,6 +12,7 @@ import { RegistrarseComponent } from './login/registrarse.component';
 import { PaginasModule } from './paginas/paginas.module';
 // Modulo de Servicio
 import { ServicioModule } from './servicios/servicio.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ServicioModule } from './servicios/servicio.module';
     BrowserModule,
     APP_ROUTER,
     PaginasModule, // Modulo Pagina
-    ServicioModule
+    ServicioModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
