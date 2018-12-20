@@ -7,8 +7,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { Page404Component } from './page404/page404.component';
 import { RegistrarseComponent } from './login/registrarse.component';
+// Modulo de Paginas
 import { PaginasModule } from './paginas/paginas.module';
-import { ConfiguracionesService } from './servicios/configuraciones.service';
+// Modulo de Servicio
+import { ServicioModule } from './servicios/servicio.module';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { ConfiguracionesService } from './servicios/configuraciones.service';
   imports: [
     BrowserModule,
     APP_ROUTER,
-    PaginasModule // Modulo Pagina
+    PaginasModule, // Modulo Pagina
+    ServicioModule
   ],
-  providers: [ConfiguracionesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

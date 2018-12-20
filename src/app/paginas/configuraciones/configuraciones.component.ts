@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfiguracionesService } from 'src/app/servicios/configuraciones.service';
+import { ConfiguracionesService } from '../../servicios/servicio.index';
 @Component({
   selector: 'app-configuraciones',
   templateUrl: './configuraciones.component.html',
