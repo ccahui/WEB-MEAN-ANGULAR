@@ -1,6 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
-
+import { Component, OnInit } from '@angular/core';
+import { ConfiguracionesService } from 'src/app/servicios/configuraciones.service';
 @Component({
   selector: 'app-configuraciones',
   templateUrl: './configuraciones.component.html',
@@ -8,15 +7,15 @@ import { DOCUMENT } from '@angular/platform-browser';
 })
 export class ConfiguracionesComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private document) { }
+  constructor(private configuracion: ConfiguracionesService) {
+   }
 
   ngOnInit() {
   }
   actualizarTema(newTema: string) {
     // id : Tema es un elemto de index.html el contenedor Principal
     const classTema = `skin-${newTema}`;
-    this.document.getElementById('tema').setAttribute('class', classTema);
-
-
+    this.configuracion.aplicarAjustes(newTema, classTema);
+    this.configuracion.guardarAjustes();
   }
 }

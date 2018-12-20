@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { Page404Component } from './page404/page404.component';
 import { RegistrarseComponent } from './login/registrarse.component';
 import { PaginasModule } from './paginas/paginas.module';
+import { ConfiguracionesService } from './servicios/configuraciones.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { PaginasModule } from './paginas/paginas.module';
     APP_ROUTER,
     PaginasModule // Modulo Pagina
   ],
-  providers: [],
+  providers: [ConfiguracionesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
