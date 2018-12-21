@@ -12,13 +12,15 @@ import { GraficoDonaComponent } from '../componentes/grafico-dona/grafico-dona.c
 // Grafica
 import { ChartsModule } from 'ng2-charts';
 import { ConfiguracionesComponent } from './configuraciones/configuraciones.component';
+import { PromesaComponent } from './promesa/promesa.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 @NgModule({
   declarations: [
     TableroComponent,
     Tablero1Component,
     PaginasComponent,
     IncrementadorComponent,  // NO SE IMPORTA se DECLARA para poder usarlo dentro de este modulo
-    GraficoDonaComponent, ConfiguracionesComponent
+    GraficoDonaComponent, ConfiguracionesComponent, PromesaComponent, RxjsComponent
   ],
   imports: [
     CommonModule,
