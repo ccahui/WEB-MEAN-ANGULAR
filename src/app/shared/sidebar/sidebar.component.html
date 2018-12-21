@@ -34,8 +34,8 @@
           <span class="label label-primary pull-right">{{ menu.submenu.length }}</span>
         </a>
         <ul class="treeview-menu">
-          <li *ngFor="let submenu of menu.submenu">
-            <a [routerLink]="submenu.url"><i class="fa fa-circle-o"></i> {{ submenu.titulo }}</a>
+          <li *ngFor="let submenu of menu.submenu"  routerLinkActive="active">
+            <a [routerLink]="[submenu.url]" ><i class="fa fa-circle-o"></i> {{ submenu.titulo }}</a>
           </li>
           
         </ul>
