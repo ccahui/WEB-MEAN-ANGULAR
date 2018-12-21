@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   }
   ingresar() {
     console.log('Ingresando...');
-    this.router.navigate(['/tablero']);
+    // this.router.navigate(['/tablero']);
+    window.location.assign('tablero');
   }
 }
