@@ -12,9 +12,6 @@
  */
 
 //Make sure jQuery has been loaded before app.js
-
-function init_plugins(){
-  
 if (typeof jQuery === "undefined") {
   throw new Error("AdminLTE requires jQuery");
 }
@@ -108,7 +105,6 @@ $.AdminLTE.options = {
  * functions and plugins as specified by the
  * options above.
  */
-
 $(function () {
   //Easy access to options
   var o = $.AdminLTE.options;
@@ -142,8 +138,8 @@ $(function () {
   if (o.enableBoxWidget) {
     $.AdminLTE.boxWidget.activate();
   }
-
-  if (o.enableFastclick && typeof FastClick != 'undefined') {
+  
+  if(o.enableFastclick && typeof FastClick != 'undefined') {
     FastClick.attach(document.body);
   }
 
@@ -208,9 +204,7 @@ $.AdminLTE.layout = {
     //Make sure the body tag has the .fixed class
     if (!$("body").hasClass("fixed")) {
       if (typeof $.fn.slimScroll != 'undefined') {
-        $(".sidebar").slimScroll({
-          destroy: true
-        }).height("auto");
+        $(".sidebar").slimScroll({destroy: true}).height("auto");
       }
       return;
     } else if (typeof $.fn.slimScroll == 'undefined' && console) {
@@ -220,9 +214,7 @@ $.AdminLTE.layout = {
     if ($.AdminLTE.options.sidebarSlimScroll) {
       if (typeof $.fn.slimScroll != 'undefined') {
         //Distroy if it exists
-        $(".sidebar").slimScroll({
-          destroy: true
-        }).height("auto");
+        $(".sidebar").slimScroll({destroy: true}).height("auto");
         //Add slimscroll
         $(".sidebar").slimscroll({
           height: ($(window).height() - $(".main-header").height()) + "px",
@@ -384,8 +376,10 @@ $.AdminLTE.boxWidget = {
       //File source to be loaded (e.g: ajax/src.php)
       source: "",
       //Callbacks
-      onLoadStart: function (box) {}, //Right after the button has been clicked
-      onLoadDone: function (box) {} //When the source has been loaded
+      onLoadStart: function (box) {
+      }, //Right after the button has been clicked
+      onLoadDone: function (box) {
+      } //When the source has been loaded
 
     }, options);
 
@@ -450,9 +444,11 @@ $.AdminLTE.boxWidget = {
     // Render options
     var settings = $.extend({
       //When the user checks the input
-      onCheck: function (ele) {},
+      onCheck: function (ele) {
+      },
       //When the user unchecks the input
-      onUncheck: function (ele) {}
+      onUncheck: function (ele) {
+      }
     }, options);
 
     return this.each(function () {
@@ -479,4 +475,3 @@ $.AdminLTE.boxWidget = {
     });
   };
 }(jQuery));
-}
