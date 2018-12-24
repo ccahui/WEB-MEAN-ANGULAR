@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import swal from 'sweetalert'; // Importando Plugin para mensajes
 
 @Component({
   selector: 'app-registrarse',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarseComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    swal('Importante', 'Debe de aceptar las condiciones', 'warning');
+  }
 
   ngOnInit() {
   }
