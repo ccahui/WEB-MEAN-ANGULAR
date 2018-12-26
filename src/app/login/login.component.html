@@ -2,7 +2,8 @@
   <div class="login-box card">
     <div class="card-body">
 
-      <form ngNativeValidate #miForm="ngForm" (ngSubmit)="ingresar( miForm )" style="font-family: Montserrat, sans-serif;" class="form-horizontal form-material px-3">
+      <form ngNativeValidate #miForm="ngForm" (ngSubmit)="ingresar( miForm )" style="font-family: Montserrat, sans-serif;"
+        class="form-horizontal form-material px-3">
         <div>
           <a class="text-center "><img src="assets/images/logo-icon.png" alt="Home" /><br /><img src="assets/images/logo-text.png"
               alt="Home" /></a>
@@ -10,13 +11,14 @@
         <br>
         <div class="form-group">
           <div class="col-xs-12">
-            <input [ngModel]="email" name="email" required type="email" style="font-size: 13px" class="form-control" placeholder="Correo del usuario">
+            <input [ngModel]="email" name="email" required type="email" style="font-size: 13px" class="form-control"
+              placeholder="Correo del usuario">
           </div>
         </div>
         <div class="form-group">
           <div class="col-xs-12">
-            <input ngModel name="password" type="password" required
-            style="font-size: 13px" class="form-control" placeholder="Contraseña">
+            <input ngModel name="password" type="password" required style="font-size: 13px" class="form-control"
+              placeholder="Contraseña">
           </div>
         </div>
         <div class="form-group row">
@@ -39,8 +41,12 @@
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12  text-center">
             <div class="social">
-              <button style="font-size: 15px; " type="button" id="btnGoogle" class="btn btn-googleplus" data-toggle="tooltip"
-                title="Iniciar sesión con Google"> <i aria-hidden="true" class="fa fa-google-plus"></i> </button>
+              <!-- Login Google Button  -->
+              <button style="font-size: 15px; " type="button" id="btnGoogle" 
+              class="btn btn-googleplus" data-toggle="tooltip"
+                title="Iniciar sesión con Google">
+                <i aria-hidden="true" class="fa fa-google-plus"></i>
+              </button>
             </div>
           </div>
         </div>

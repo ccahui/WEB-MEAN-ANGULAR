@@ -17,7 +17,7 @@ export class UsuarioService {
 
 
   estaLogueado() {
-      // this.cargarStorage();
+    // this.cargarStorage();
     if (this.token) {
       return true;
     }
@@ -62,7 +62,6 @@ export class UsuarioService {
       localStorage.removeItem('email');
     }
 
-
     return this.http.post(url, usuario)
       .pipe(
         map((res: any) => {
@@ -71,5 +70,27 @@ export class UsuarioService {
           return true;
         })
       );
+  }
+  loginGoogle(token: string) {
+    const URL = URL_SERVICE + '/login/google';
+
+    return this.http.post(URL, { token })
+      .pipe(
+        map((res: any) => {
+          // Almacenando en el LocalStorage
+          this.guardarStorage(res.id, res.token, res.usuario);
+          return true;
+        })
+      );
+  }
+  logout() {
+    this.usuario = null;
+    this.token = null;
+    localStorage.removeItem('token');
+    localStorage.removeItem('usuario');
+    localStorage.removeItem('item'); // Inncesario ?
+
+    window.location.href = '/login';
+
   }
 }
