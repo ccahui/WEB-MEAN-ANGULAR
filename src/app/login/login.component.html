@@ -1,55 +1,57 @@
-
 <section id="wrapper" class="login-register login-sidebar" style="background-image:url(assets/images/background/login-register.jpg);">
   <div class="login-box card">
-      <div class="card-body">
+    <div class="card-body">
 
-          <form (ngSubmit)="ingresar()" style="font-family: Montserrat, sans-serif;" class="form-horizontal form-material px-3" >
-        
-            
-            <div>
-                <a  class="text-center "><img src="assets/images/logo-icon.png" alt="Home" /><br/><img src="assets/images/logo-text.png" alt="Home" /></a>
-              </div>
-                <br>
-              <div class="form-group"  >
-                  <div class="col-xs-12" >
-                      <input style="font-size: 13px" name="email" class="form-control" type="email"  placeholder="Correo del usuario">
-                  </div>
-              </div>
-              <div class="form-group">
-                  <div class="col-xs-12">
-                      <input style="font-size: 13px" name="password" class="form-control" type="password"  placeholder="Contraseña">
-                  </div>
-              </div>
-              <div class="form-group row">
-                  <div class="col-md-12">
-                      <div class="checkbox checkbox-primary pull-left mt-0">
-                          <input  name="recuerdame" id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
-                          <label style="font-size: 13px"  for="checkbox-signup"> Recuérdame </label>
-                      </div>
-                      
-                      <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right mt-2 pt-1"><i class="fa fa-lock m-r-5"></i> Olvide contraseña?</a> </div>
-                    
-                    </div>
-              <div class="form-group text-center">
-                  <div class="col-xs-12">
-                      <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Ingresar</button>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12  text-center">
-                      <div class="social">
-                          <button style="font-size: 15px; " type="button" id="btnGoogle" class="btn btn-googleplus" data-toggle="tooltip" title="Iniciar sesión con Google"> <i aria-hidden="true" class="fa fa-google-plus"></i> </button>
-                      </div>
-                  </div>
-              </div>
-              <div class="form-group ">
-                  <div class="col-sm-12 text-center" style="font-size: 13px">
-                      No tienes cuenta? <a routerLink="/registrarse" class="text-primary "><b>Crear cuenta</b></a>
-                  </div>
-              </div>
-              
-          </form>
-          
-      </div>
+      <form ngNativeValidate #miForm="ngForm" (ngSubmit)="ingresar( miForm )" style="font-family: Montserrat, sans-serif;" class="form-horizontal form-material px-3">
+        <div>
+          <a class="text-center "><img src="assets/images/logo-icon.png" alt="Home" /><br /><img src="assets/images/logo-text.png"
+              alt="Home" /></a>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input [(ngModel)]="email" name="email" required type="email" style="font-size: 13px" class="form-control" placeholder="Correo del usuario">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input ngModel name="password" type="password" required
+            style="font-size: 13px" class="form-control" placeholder="Contraseña">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-12">
+            <div class="checkbox checkbox-primary pull-left mt-0">
+              <input [(ngModel)]="recuerdame" name="recuerdame" type="checkbox" id="checkbox-signup" class="filled-in chk-col-light-blue">
+              <label style="font-size: 13px" for="checkbox-signup"> Recuérdame </label>
+            </div>
+
+            <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right mt-2 pt-1"><i class="fa fa-lock m-r-5"></i>
+              Olvide contraseña?</a>
+          </div>
+
+        </div>
+        <div class="form-group text-center">
+          <div class="col-xs-12">
+            <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Ingresar</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12  text-center">
+            <div class="social">
+              <button style="font-size: 15px; " type="button" id="btnGoogle" class="btn btn-googleplus" data-toggle="tooltip"
+                title="Iniciar sesión con Google"> <i aria-hidden="true" class="fa fa-google-plus"></i> </button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-sm-12 text-center" style="font-size: 13px">
+            No tienes cuenta? <a routerLink="/registrarse" class="text-primary "><b>Crear cuenta</b></a>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
   </div>
 </section>
