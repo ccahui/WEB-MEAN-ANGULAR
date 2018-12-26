@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     this.usuarioService.login(usuario, this.recuerdame)
       .subscribe(estado => {
         // this.router.navigate(['/tablero']); Recordad el problema de los scripts 
-        window.location.assign('tablero');
+        window.location.href = '/tablero';
 
       });
 

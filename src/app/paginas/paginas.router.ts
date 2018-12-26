@@ -6,11 +6,14 @@ import { Tablero1Component } from './tablero1/tablero1.component';
 import { ConfiguracionesComponent } from './configuraciones/configuraciones.component';
 import { PromesaComponent } from './promesa/promesa.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { LoginGuard } from '../servicios/servicio.index';
 
+// Guards para evitar acceso a usuarios no logeados
 const routesPagina: Routes = [
   {
     path: '',
     component: PaginasComponent,
+    canActivate: [ LoginGuard ],
     children: [
       { path: 'tablero', component: TableroComponent, data: { titulo: 'Gráficas' } },
       { path: 'tablero1', component: Tablero1Component, data: { titulo: 'Tablero' } },

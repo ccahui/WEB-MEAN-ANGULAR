@@ -9,7 +9,37 @@ import { map } from 'rxjs/operators';
 })
 export class UsuarioService {
 
-  constructor(public http: HttpClient) { }
+  usuario: string;
+  token: string;
+  constructor(public http: HttpClient) {
+    this.cargarStorage();
+  }
+
+
+  estaLogueado() {
+      // this.cargarStorage();
+    if (this.token) {
+      return true;
+    }
+    return false;
+  }
+  cargarStorage() {
+    if (localStorage.getItem('token')) {
+      this.token = localStorage.getItem('token');
+      this.usuario = localStorage.getItem('usuario');
+    } else {
+      this.token = null;
+      this.usuario = null;
+    }
+  }
+  guardarStorage(id: string, token: string, usuario: Usuario) {
+
+    localStorage.setItem('id', id);
+    localStorage.setItem('token', token);
+    // Recordad localStorage solo acepta String
+    localStorage.setItem('usuario', JSON.stringify(usuario));
+  }
+
 
   crearUsuario(usuario: Usuario) {
     const URL = URL_SERVICE + '/usuario';
@@ -37,10 +67,7 @@ export class UsuarioService {
       .pipe(
         map((res: any) => {
           // Almacenando en el LocalStorage
-          localStorage.setItem('id', res.id);
-          localStorage.setItem('token', res.token);
-          // Recordad que res.USUARIO es un Objeto, y localStorage solo acepta String
-          localStorage.setItem('usuario', JSON.stringify(res.usuario));
+          this.guardarStorage(res.id, res.token, res.usuario);
           return true;
         })
       );
