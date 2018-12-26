@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import swal from 'sweetalert'; // Importando Plugin para mensajes
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UsuarioService } from '../servicios/servicio.index';
+import { Usuario } from '../modelos/usuario.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrarse',
@@ -10,7 +13,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class RegistrarseComponent implements OnInit {
 
   forma: FormGroup;
-  constructor() { }
+  constructor(public usuarioServicio: UsuarioService, public router: Router) { }
 
   sonIguales(campo1, campo2) {
     return (group: FormGroup) => {
@@ -52,7 +55,15 @@ export class RegistrarseComponent implements OnInit {
       swal('Importante', 'Debe aceptar las condiciones', 'warning');
       return;
     }
-    console.log(this.forma.value);
+    const usuario = new Usuario(
+      this.forma.value.nombre,
+      this.forma.value.email,
+      this.forma.value.password
+    );
+    this.usuarioServicio.crearUsuario(usuario)
+      .subscribe(resp => {
+        this.router.navigate(['/login']);
+      });
 
   }
 
